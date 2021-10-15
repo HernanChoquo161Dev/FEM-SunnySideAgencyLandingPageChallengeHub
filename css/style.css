@@ -77,46 +77,51 @@ body {
 .header-page__arrow {
   width: 4rem;
   position: absolute;
-  top: 52%;
+  bottom: 32%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.nave-page__list {
+.nav-page__content-menu {
   flex: 0 1 50%;
-
+}
+.nav-page__menu-image {
+  display: none;
+}
+.nav-page__list {
   display: flex;
   justify-content: flex-end;
   align-items: center;
 
   list-style: none;
 }
-.nave-page__option {
+.nav-page__figure {
+  display: none;
+}
+.nav-page__option {
   padding: 1.5rem 2.5rem;
 }
-.nave-page__option:nth-child(4) {
-  margin-left: 2rem;
-}
-.nave-page__option:nth-child(4):hover {
+.nav-page__option:nth-child(4):hover {
   background-color: var(--color-option-hover);
 }
-.nave-page__option--background {
+.nav-page__option--background {
   background-color: var(--color-white);
+  margin-left: 2rem;
 
   border-radius: 5rem;
 }
-.nave-page__link-option {
+.nav-page__link-option {
   text-decoration: none;
   color: inherit;
   font-size: 1.8rem;
   font-weight: 600;
 }
-.nave-page__link-option--text {
+.nav-page__link-option--text {
   color: var(--color-dark-blue);
   font-family: "Fraunces", serif;
   text-transform: uppercase;
   font-size: 1.4rem;
 }
-.nave-page__option:nth-child(4):hover .nave-page__link-option {
+.nav-page__option:nth-child(4):hover .nav-page__link-option {
   color: var(--color-white);
 }
 /*presentation page section*/
@@ -432,24 +437,72 @@ body {
   }
   .header-page__arrow {
     width: 5rem;
-    top: 62%;
+    bottom: 16%;
   }
   /*nav page*/
   .nav-page {
     padding: 4rem;
     padding-bottom: 8rem;
+
+    position: relative;
   }
-  .nave-page__list {
+  .nav-page__content-menu {
+    flex: 0 1 50%;
+  }
+  .nav-page__menu-image {
+    display: block;
+
+    float: right;
+  }
+  .nav-page__list {
+    background-color: var(--color-white-background);
+    position: absolute;
+
+    flex-direction: column;
+
+    width: calc(100% - 8rem);
+
+    top: 12rem;
+    left: 4rem;
+
+    padding: 6rem 0;
+
+    z-index: 100;
+  }
+  .nav-page__list--hidden {
     display: none;
+    opacity: 0;
   }
-  .nave-page__option {
-    padding: 1.5rem 2.5rem;
+  .nav-page__figure {
+    display: block;
+    background-color: var(--color-white-background);
+
+    position: absolute;
+    width: 4.5rem;
+    height: 4.5rem;
+
+    top: -3.5rem;
+    right: 0;
+
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+    z-index: 50;
   }
-  .nave-page__link-option {
-    font-size: 1.2rem;
+  .nav-page__option {
+    padding: 3rem 4rem;
   }
-  .nave-page__link-option--text {
-    font-size: 1rem;
+  .nav-page__option {
+    margin: 0;
+  }
+  .nav-page__link-option {
+    font-size: 3.6rem;
+    color: var(--color-dark-grayish);
+  }
+  .nav-page__link-option--text {
+    color: #000000;
+    font-size: 3rem;
+  }
+  .nav-page__option--background {
+    background-color: var(--color-yellow);
   }
   /*presentation page section*/
   .presentation-page {
