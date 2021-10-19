@@ -440,10 +440,10 @@ body {
     font-size: 104.5%;
   }
 }
-@media screen and (max-width: 1800px) {
+@media screen and (max-width: 2000px) {
   /*component*/
   html {
-    font-size: 73.5%;
+    font-size: 78.5%;
   }
 }
 @media screen and (max-width: 1680px) {
